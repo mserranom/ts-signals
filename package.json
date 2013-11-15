@@ -11,5 +11,9 @@
     "scripts": {
         "test": "grunt test --verbose",
         "install": "grunt --verbose"
+    },
+    "repository" : {
+        "type" : "git",
+        "url" : "https://github.com/mserranom/ts-signals.git"
     }
 }
