@@ -38,8 +38,8 @@ module.exports = function (grunt) {
             options: {
                 module: 'AMD',
                 target: 'ES5',
-                base_path: project.srcDir,
-                sourcemap: true,
+                basePath: project.srcDir,
+                sourceMap: true,
                 declaration: true
             }
         },
@@ -56,6 +56,16 @@ module.exports = function (grunt) {
                 src: project.targetJs,
                 dest: project.targetJsMin
             }
+        },
+
+        watch: {
+            scripts: {
+                files: [project.srcDir + '/**/*.ts', project.testDir + '/**/*.ts'],
+                tasks: ['test'],
+                options: {
+                    spawn: false,
+                }
+            }
         }
     });
 
@@ -63,6 +73,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-typescript');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask("compile", ["clean", "typescript"]);
     grunt.registerTask("test", ["compile", "jasmine"]);

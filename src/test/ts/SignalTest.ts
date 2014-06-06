@@ -31,6 +31,15 @@ describe("Signal Test", function() {
         expect(handlerMock.handle).toHaveBeenCalled();
     });
 
+    it("handler added once shouldn't be called more than once", function() {
+        var onceSignal = new signals.Signal();
+        var onceHandlerMock = jasmine.createSpyObj('handler', ['handle']);
+        onceSignal.addOnce(onceHandlerMock.handle, onceHandlerMock);
+        onceSignal.dispatch();
+        onceSignal.dispatch();
+        expect(onceHandlerMock.handle.callCount).toBe(1);
+    });
+
     it("handler closure is resolved correctly", function() {
         var handler = new Handler();
         signal.add(handler.handle, handler);

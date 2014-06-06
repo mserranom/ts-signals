@@ -10,6 +10,12 @@ module signals {
             }
         }
 
+        addOnce(listener: () => void, self: any) {
+            if(!this.hasListener(listener, self)) {
+                this._listeners.push(new SignalHandler(listener, self, true));
+            }
+        }
+
         private hasListener(listener: () => void, self: any) : boolean {
             for(var i = 0; i < this._listeners.length; i++) {
                 if(this._listeners[i].equals(listener, self)) {
@@ -34,18 +40,22 @@ module signals {
 
         dispatch() {
             this._listeners.forEach(handler => handler.apply());
+
+            this._listeners = this._listeners.filter(
+                (handler, i, arr) => { return !handler.once() } );
         }
     }
 
     class SignalHandler {
 
         private _handler : () => void;
-
         private _self : any;
+        private _once : boolean;
 
-        constructor(handler: () => void, self : any) {
+        constructor(handler: () => void, self : any, once = false) {
             this._handler = handler;
             this._self = self;
+            this._once = once;
         }
 
         apply() {
@@ -54,6 +64,10 @@ module signals {
 
         equals(handler: () => void, self : any) : boolean {
             return this._handler == handler && this._self == self;
+        }
+
+        once() : boolean {
+            return this._once;
         }
     }
 
