@@ -1,5 +1,5 @@
 #ts-signals
-[![Build Status](https://travis-ci.org/mserranom/ts-signals.svg?branch=master)](https://travis-ci.org/mserranom/ts-signals)
+[![Build Status](https://travis-ci.org/mserranom/ts-signals.svg?branch=master)](https://travis-ci.org/mserranom/ts-signals)(https://travis-ci.org/mserranom/container-ts) [![npm version](https://badge.fury.io/js/container-ts.svg)](https://badge.fury.io/js/container-ts)
 
 Signals are a strongly typed, lightweight alternative to events in Typescript.
 
