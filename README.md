@@ -1,9 +1,7 @@
 #ts-signals
-[![Build Status](https://travis-ci.org/mserranom/ts-signals.svg?branch=master)](https://travis-ci.org/mserranom/ts-signals)(https://travis-ci.org/mserranom/container-ts) [![npm version](https://badge.fury.io/js/container-ts.svg)](https://badge.fury.io/js/container-ts)
+[![Build Status](https://travis-ci.org/mserranom/ts-signals.svg?branch=master)](https://travis-ci.org/mserranom/container-ts) [![npm version](https://badge.fury.io/js/ts-signals.svg)](https://badge.fury.io/js/ts-signals)
 
-Signals are a strongly typed, lightweight alternative to events in Typescript.
-
-### NOTE: This project is no longer mantained
+### NOTE: This project is not actively mantained
 
 ## Concept
 * A Signal is essentially a mini-dispatcher specific to one event, with its own array of listeners.
