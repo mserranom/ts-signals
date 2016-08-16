@@ -1,7 +1,9 @@
 #ts-signals
-[![Build Status](https://travis-ci.org/mserranom/ts-signals.png?branch=master)](https://travis-ci.org/mserranom/ts-signals)
+[![Build Status](https://travis-ci.org/mserranom/ts-signals.svg?branch=master)](https://travis-ci.org/mserranom/ts-signals)
 
 Signals are a strongly typed, lightweight alternative to events in Typescript.
+
+### NOTE: This project is no longer mantained
 
 ## Concept
 * A Signal is essentially a mini-dispatcher specific to one event, with its own array of listeners.
