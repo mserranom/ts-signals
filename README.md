@@ -1,5 +1,5 @@
-#ts-signals
-[![Build Status](https://travis-ci.org/mserranom/ts-signals.svg?branch=master)](https://travis-ci.org/mserranom/container-ts) [![npm version](https://badge.fury.io/js/ts-signals.svg)](https://badge.fury.io/js/ts-signals)
+# ts-signals
+[![Build Status](https://travis-ci.org/mserranom/ts-signals.svg?branch=master)](https://travis-ci.org/mserranom/container-ts) 
 
 ### NOTE: This project is not actively mantained
 
