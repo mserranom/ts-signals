@@ -1,7 +1,7 @@
 # ts-signals
 [![Build Status](https://travis-ci.org/mserranom/ts-signals.svg?branch=master)](https://travis-ci.org/mserranom/container-ts) 
 
-### NOTE: This project is not actively mantained
+### NOTE: This project is not actively maintained
 
 ## Concept
 * A Signal is essentially a mini-dispatcher specific to one event, with its own array of listeners.
